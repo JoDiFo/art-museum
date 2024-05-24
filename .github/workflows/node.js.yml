@@ -29,6 +29,11 @@ jobs:
         with:
           cmd: build
 
+      - name: Lint typescript
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint:ts
+
       - name: Test the app
         uses: borales/actions-yarn@v4
         with:
