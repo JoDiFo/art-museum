@@ -5,13 +5,13 @@ import "@testing-library/jest-dom";
 describe("Test Header component", () => {
   it("Renders logo link", () => {
     render(<Header />);
-    const logoLink = screen.getByTestId("LogoLink");
+    const logoLink = screen.getByTestId("headerLogoLink");
     expect(logoLink).toBeInTheDocument();
   });
 
   it("Renders favorites link", () => {
     render(<Header />);
-    const favoritesLink = screen.getByTestId("FavoritesLink");
+    const favoritesLink = screen.getByTestId("favoritesLink");
     expect(favoritesLink).toBeInTheDocument();
   });
 });

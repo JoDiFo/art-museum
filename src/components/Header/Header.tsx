@@ -8,12 +8,12 @@ export function Header() {
     <StyledHeader>
       <Content>
         <div>
-          <a href="./home.html" data-testid="LogoLink">
+          <a href="./home.html" data-testid="headerLogoLink">
             <img src={museumLogo} alt="museum logo" />
           </a>
         </div>
         <RightBlock>
-          <StyledLink href="./favorites.html" data-testid="FavoritesLink">
+          <StyledLink href="./favorites.html" data-testid="favoritesLink">
             <img src={bookmarkIcon} alt="" />
             <span>Your favorites</span>
           </StyledLink>
