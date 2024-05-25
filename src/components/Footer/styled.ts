@@ -1,4 +1,4 @@
-import { WHITE_COLOR } from "@/constants/colors";
+import { WHITE_COLOR } from "constants/colors";
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`

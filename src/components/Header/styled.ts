@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HEADER_BACKGROUND, WHITE_COLOR } from "../../constants/colors";
+import { HEADER_BACKGROUND, WHITE_COLOR } from "constants/colors";
 
 export const StyledHeader = styled.header`
   padding: 32px 0;
