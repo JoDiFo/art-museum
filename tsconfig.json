@@ -19,5 +19,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "./src/type-declarations.d.ts"]
+  "include": ["src", "./src/type-declarations.d.ts", "mocks"]
 }
