@@ -4,6 +4,7 @@ export function App() {
   return (
     <>
       <Header />
+      <p>App Text</p>
     </>
   );
 }
