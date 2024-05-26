@@ -10,8 +10,11 @@ import {
 import { SearchBar } from "components/SearchBar";
 import { SmallCardContainer } from "components/SmallCardContainer";
 import { PaginationContainer } from "components/PaginationContainer";
+import { useState } from "react";
 
 function HomePage() {
+  const [searchString, setSearchString] = useState<string>("");
+
   return (
     <StyledMain>
       <StyledContent>
@@ -20,14 +23,14 @@ function HomePage() {
             let&lsquo;s find some <br />
             <EmphasizedH1>art</EmphasizedH1> here!
           </StyledH1>
-          <SearchBar />
+          <SearchBar setSearchString={(value) => setSearchString(value)} />
         </div>
         <section className="gallery">
           <div>
             <HeaderSubtext>Topics for you</HeaderSubtext>
             <StyledH2>Our special gallery</StyledH2>
           </div>
-          <PaginationContainer />
+          <PaginationContainer searchString={searchString} />
         </section>
         <section className="other-works">
           <div>

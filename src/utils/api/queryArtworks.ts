@@ -9,9 +9,9 @@ export async function queryArtworks(
     (page || page === 0) && limit && limit !== 0
       ? `page=${page}&limit=${limit}`
       : "";
-  const searchParam = searchString ? `/search?q=${searchString}` : "";
+  const searchParam = searchString ? `/search?q=${searchString}&` : "?";
 
-  const req = `${baseUrl}?${fieldsParam}&${paginationParam}${searchParam}`;
+  const req = `${baseUrl}${searchParam}${fieldsParam}&${paginationParam}`;
   console.log(req);
 
   const res = await fetch(req);

@@ -4,9 +4,15 @@ import { Pagination } from "components/Pagination";
 import { useState } from "react";
 import useQueryArtworks from "utils/hooks/useQuery";
 
-export function PaginationContainer() {
+interface IPaginationContainerProps {
+  searchString: string;
+}
+
+export function PaginationContainer({
+  searchString,
+}: IPaginationContainerProps) {
   const [page, setPage] = useState<number>(1);
-  const { loading, error, data } = useQueryArtworks("", page, 3);
+  const { loading, error, data } = useQueryArtworks(searchString, page, 3);
 
   return (
     <div>
