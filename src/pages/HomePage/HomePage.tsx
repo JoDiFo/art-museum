@@ -1,4 +1,3 @@
-import { Pagination } from "components/Pagination";
 import {
   StyledMain,
   StyledContent,
@@ -10,7 +9,7 @@ import {
 
 import { SearchBar } from "components/SearchBar";
 import { SmallCardContainer } from "components/SmallCardContainer";
-import { CardContainer } from "components/CardContainer";
+import { PaginationContainer } from "components/PaginationContainer";
 
 function HomePage() {
   return (
@@ -28,10 +27,7 @@ function HomePage() {
             <HeaderSubtext>Topics for you</HeaderSubtext>
             <StyledH2>Our special gallery</StyledH2>
           </div>
-          <div>
-            <CardContainer />
-            <Pagination />
-          </div>
+          <PaginationContainer />
         </section>
         <section className="other-works">
           <div>

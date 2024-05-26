@@ -14,6 +14,7 @@ export const StyledSpan = styled.span`
   line-height: 24px;
   text-align: left;
   border-radius: 3px;
+  cursor: pointer;
 `;
 
 export const SelectedSpan = styled(StyledSpan)`

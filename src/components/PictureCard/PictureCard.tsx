@@ -11,14 +11,20 @@ import {
   StyledImage,
 } from "./styled";
 
-export function PictureCard() {
+import { IArtwork } from "types";
+
+interface IPictureCardProps {
+  artwork: IArtwork;
+}
+
+export function PictureCard({ artwork }: IPictureCardProps) {
   return (
     <StyledCard>
-      <img src={imagePlaceholder} alt="" />
+      <img src={imagePlaceholder} alt={artwork.thumbnail?.alt_text} />
       <CardDescription>
         <div className="left">
-          <PictureName>Charles V, bust length...</PictureName>
-          <Author>Giovanni Britto</Author>
+          <PictureName>{artwork.title}</PictureName>
+          <Author>{artwork.artist_title || "unknown"}</Author>
           <CardVisibility>Public</CardVisibility>
         </div>
         <div className="right">

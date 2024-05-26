@@ -1,13 +1,18 @@
 import { PictureCard } from "components/PictureCard";
 
 import { StyledWrapper } from "./styled";
+import { IArtwork } from "types";
 
-export function CardContainer() {
+interface ICardContainerProps {
+  artworks: IArtwork[];
+}
+
+export function CardContainer({ artworks }: ICardContainerProps) {
   return (
     <StyledWrapper>
-      <PictureCard />
-      <PictureCard />
-      <PictureCard />
+      {artworks.map((artwork) => (
+        <PictureCard artwork={artwork} key={artwork.id} />
+      ))}
     </StyledWrapper>
   );
 }
