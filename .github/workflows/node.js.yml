@@ -27,7 +27,7 @@ jobs:
       - name: Build bundle
         uses: borales/actions-yarn@v4
         with:
-          cmd: build
+          cmd: build:prod
 
       - name: Lint typescript
         uses: borales/actions-yarn@v4
