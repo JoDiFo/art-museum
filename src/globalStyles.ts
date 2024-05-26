@@ -12,6 +12,27 @@ export const GlobalStyles = createGlobalStyle`
   src: url(./assets/fonts/Inter);
 }
 
+@keyframes loaderAnimation {
+  0%  {
+    box-shadow: 1.8rem 0 #000, -1.8rem 0 #0002;
+    background: #000 
+  }
+  33% {
+    box-shadow: 1.8rem 0 #000, -1.8rem 0 #0002;
+    background: #0002
+  }
+
+  66% {
+    box-shadow: 1.8rem 0 #0002, -1.8rem 0 #000; 
+    background: #0002
+  }
+  
+  100% {
+    box-shadow: 1.8rem 0 #0002, -1.8rem 0 #000; 
+    background: #000 
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -37,5 +58,16 @@ img {
 
 body {
   background-color: ${BACKGROUND_COLOR};
+}
+
+main {
+  flex-grow: 1;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 `;

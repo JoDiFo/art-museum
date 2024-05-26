@@ -4,13 +4,14 @@ import { Header } from "components/Header";
 import { Routes, Route } from "react-router-dom";
 import { FavoritesPage } from "pages/FavoritesPage";
 import { Suspense } from "react";
+import { PageLoader } from "components/PageLoader";
 
 export function App() {
   return (
     <>
       <Header />
 
-      <Suspense fallback="Loading...">
+      <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
