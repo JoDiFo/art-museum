@@ -1,7 +1,7 @@
 import { StyledHeader, Content, RightBlock, StyledLink } from "./styled";
 
 import museumLogo from "assets/museum-logo.png";
-import bookmarkIcon from "assets/yellow-bookmark-icon.svg";
+import BookmarkIcon from "assets/yellow-bookmark-icon.svg";
 
 export function Header() {
   return (
@@ -14,7 +14,7 @@ export function Header() {
         </div>
         <RightBlock>
           <StyledLink href="./favorites.html" data-testid="favoritesLink">
-            <img src={bookmarkIcon} alt="" />
+            <BookmarkIcon />
             <span>Your favorites</span>
           </StyledLink>
         </RightBlock>

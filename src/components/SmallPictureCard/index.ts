@@ -1,0 +1,1 @@
+export { SmallPictureCard } from "./SmallPictureCard";

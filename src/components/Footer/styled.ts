@@ -10,6 +10,7 @@ export const StyledFooter = styled.footer`
 `;
 
 export const StyledContent = styled.div`
+  width: calc(100% * 2 / 3);
   display: flex;
   justify-content: space-between;
 `;

@@ -2,6 +2,16 @@ import { createGlobalStyle } from "styled-components";
 import { BACKGROUND_COLOR } from "constants/colors";
 
 export const GlobalStyles = createGlobalStyle`
+@font-face {
+  font-family: "Lexend Deca";
+  src: url(./assets/fonts/Lexend_Deca);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter);
+}
+
 *,
 *::after,
 *::before {
@@ -10,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
-a {
+a { 
   text-decoration: none;
   color: inherit;
 }
@@ -18,6 +28,11 @@ a {
 button {
   background-color: transparent;
   border: none;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 body {
