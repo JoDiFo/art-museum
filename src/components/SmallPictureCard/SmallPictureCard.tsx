@@ -11,15 +11,21 @@ import {
   SmallCardWrapper,
 } from "./styled";
 
-export function SmallPictureCard() {
+import { IArtwork } from "types";
+
+interface ISmallPictureCardProps {
+  artwork: IArtwork;
+}
+
+export function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
   return (
     <SmallCardWrapper>
       <div className="image">
         <SmallCardImage src={placeholderImage} alt="" />
       </div>
       <div className="description">
-        <PictureName>Charles V, bust length...</PictureName>
-        <Author>Giovanni Britto</Author>
+        <PictureName>{artwork.title}</PictureName>
+        <Author>{artwork.artist_title ?? "unknown"}</Author>
         <CardVisibility>Public</CardVisibility>
       </div>
       <div className="button">
