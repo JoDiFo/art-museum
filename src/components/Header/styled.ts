@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 import { HEADER_BACKGROUND, WHITE_COLOR } from "constants/colors";
 
 export const StyledHeader = styled.header`
@@ -26,7 +28,7 @@ export const RightBlock = styled.div`
   gap: 16px;
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 4px;
