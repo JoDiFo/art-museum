@@ -2,7 +2,7 @@ import { CardContainer } from "components/CardContainer";
 import { Loader } from "components/Loader";
 import { Pagination } from "components/Pagination";
 import { useState } from "react";
-import useQueryArtworks from "utils/hooks/useQuery";
+import useQueryArtworks from "utils/hooks/useQueryArtworks";
 
 interface IPaginationContainerProps {
   searchString: string;

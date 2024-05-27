@@ -1,4 +1,3 @@
-import imagePlaceholder from "assets/placeholder-image.png";
 import BookmarkIcon from "assets/orange-bookmark-icon.svg";
 
 import {
@@ -20,12 +19,17 @@ interface IPictureCardProps {
 export function PictureCard({ artwork }: IPictureCardProps) {
   return (
     <StyledCard>
-      <img src={imagePlaceholder} alt={artwork.thumbnail?.alt_text} />
+      <img
+        src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
+        alt={artwork.thumbnail?.alt_text}
+      />
       <CardDescription>
         <div className="left">
           <PictureName>{artwork.title}</PictureName>
           <Author>{artwork.artist_title || "unknown"}</Author>
-          <CardVisibility>Public</CardVisibility>
+          <CardVisibility>
+            {artwork.is_public_domain ? "Public" : "Private"}
+          </CardVisibility>
         </div>
         <div className="right">
           <StyledButton>

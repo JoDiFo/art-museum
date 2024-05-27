@@ -6,4 +6,6 @@ export interface IArtwork {
     alt_text: string;
     lqip: string;
   };
+  is_public_domain: boolean;
+  image_id: string;
 }

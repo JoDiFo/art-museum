@@ -1,7 +1,7 @@
 import { SmallPictureCard } from "components/SmallPictureCard";
 
 import { StyledWrapper } from "./styled";
-import useQueryArtworks from "utils/hooks/useQuery";
+import useQueryArtworks from "utils/hooks/useQueryArtworks";
 import { Loader } from "components/Loader";
 import { useRef } from "react";
 

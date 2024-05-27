@@ -1,4 +1,3 @@
-import placeholderImage from "assets/placeholder-image.png";
 import BookmarkIcon from "assets/orange-bookmark-icon.svg";
 
 import {
@@ -21,12 +20,17 @@ export function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
   return (
     <SmallCardWrapper>
       <div className="image">
-        <SmallCardImage src={placeholderImage} alt="" />
+        <SmallCardImage
+          src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
+          alt=""
+        />
       </div>
       <div className="description">
         <PictureName>{artwork.title}</PictureName>
         <Author>{artwork.artist_title ?? "unknown"}</Author>
-        <CardVisibility>Public</CardVisibility>
+        <CardVisibility>
+          {artwork.is_public_domain ? "Public" : "Private"}
+        </CardVisibility>
       </div>
       <div className="button">
         <SmallCardButton>
