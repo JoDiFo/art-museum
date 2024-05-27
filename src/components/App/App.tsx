@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { FavoritesPage } from "pages/FavoritesPage";
 import { Suspense } from "react";
 import { PageLoader } from "components/PageLoader";
+import { DetailedViewPage } from "pages/DetailedViewPage";
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/artwork" element={<DetailedViewPage />} />
         </Routes>
       </Suspense>
 

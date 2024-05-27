@@ -22,7 +22,7 @@ export function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
       <div className="image">
         <SmallCardImage
           src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
-          alt=""
+          alt={artwork.thumbnail?.alt_text}
         />
       </div>
       <div className="description">

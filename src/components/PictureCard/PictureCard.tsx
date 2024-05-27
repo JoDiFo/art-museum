@@ -11,6 +11,7 @@ import {
 } from "./styled";
 
 import { IArtwork } from "types";
+import { Link } from "react-router-dom";
 
 interface IPictureCardProps {
   artwork: IArtwork;
@@ -19,10 +20,12 @@ interface IPictureCardProps {
 export function PictureCard({ artwork }: IPictureCardProps) {
   return (
     <StyledCard>
-      <img
-        src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
-        alt={artwork.thumbnail?.alt_text}
-      />
+      <Link to={`/artwork`} state={{ artworkId: artwork.id }}>
+        <img
+          src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
+          alt={artwork.thumbnail?.alt_text}
+        />
+      </Link>
       <CardDescription>
         <div className="left">
           <PictureName>{artwork.title}</PictureName>
