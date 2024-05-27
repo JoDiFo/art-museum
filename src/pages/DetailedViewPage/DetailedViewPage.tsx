@@ -1,5 +1,14 @@
 import useQueryArtwork from "utils/hooks/useQueryArtwork";
-import { StyledMain, StyledContent, HeaderSubtext, StyledH2 } from "./styled";
+import {
+  StyledMain,
+  StyledContent,
+  HeaderSubtext,
+  StyledH2,
+  PictureData,
+  ImageWrapper,
+  Image,
+  Field,
+} from "./styled";
 import { PageLoader } from "components/PageLoader";
 import { useLocation } from "react-router-dom";
 
@@ -18,34 +27,35 @@ function DetailedViewPage() {
   return (
     <StyledMain>
       <StyledContent>
-        <div>
-          <img
+        <ImageWrapper>
+          <Image
             src={`https://www.artic.edu/iiif/2/${artwork?.image_id}/full/843,/0/default.jpg`}
             alt={artwork?.thumbnail?.alt_text}
           />
-        </div>
-        <div>
+        </ImageWrapper>
+        <PictureData>
           <div>
-            <HeaderSubtext>{artwork?.title}</HeaderSubtext>
             <StyledH2>{artwork?.artist_title}</StyledH2>
+            <HeaderSubtext>{artwork?.title}</HeaderSubtext>
+            <HeaderSubtext>1459</HeaderSubtext>
           </div>
           <div>
             <StyledH2>Overview</StyledH2>
             <p>
-              <span>Artist nationality:</span> {}
+              <Field>Artist nationality:</Field> {}
             </p>
             <p>
-              <span>Dimensions Sheet:</span> {}
+              <Field>Dimensions Sheet:</Field> {}
             </p>
             <p>
-              <span>Credit Line:</span> {}
+              <Field>Credit Line:</Field> {}
             </p>
             <p>
-              <span>Repository</span> {}
+              <Field>Repository</Field> {}
             </p>
             <p>{artwork?.is_public_domain ? "Public" : "Private"}</p>
           </div>
-        </div>
+        </PictureData>
       </StyledContent>
     </StyledMain>
   );

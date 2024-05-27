@@ -11,7 +11,28 @@ export const StyledMain = styled.main`
 export const StyledContent = styled.div`
   width: calc(100% * 2 / 3);
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const PictureData = styled.div`
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 40%;
+  height: 570px;
+`;
+
+export const ImageWrapper = styled.div`
+  flex-basis: 50%;
+  width: 497px;
+  height: 570px;
+`;
+
+export const Image = styled.img`
+  height: 100%;
+  object-fit: contain;
 `;
 
 export const HeaderSubtext = styled.p`
@@ -20,10 +41,12 @@ export const HeaderSubtext = styled.p`
   font-weight: 400;
   line-height: 20px;
   color: ${SECONDARY_COLOR};
-  text-align: center;
 `;
 
 export const StyledH2 = styled.h2`
   font: ${HEADER_MD};
-  text-align: center;
+`;
+
+export const Field = styled.span`
+  color: ${SECONDARY_COLOR};
 `;
