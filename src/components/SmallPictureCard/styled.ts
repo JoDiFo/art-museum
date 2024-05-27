@@ -1,7 +1,6 @@
 import {
   ACCENT_COLOR,
   BACKGROUND_COLOR_DARK,
-  HOVER_BACKGROUND_COLOR,
   WHITE_COLOR,
 } from "constants/colors";
 
@@ -20,17 +19,6 @@ export const SmallCardWrapper = styled.div`
 export const SmallCardImage = styled.img`
   width: 80px;
   height: 80px;
-`;
-
-export const SmallCardButton = styled.button`
-  padding: 17.54px;
-  border-radius: 50%;
-  background-color: ${HOVER_BACKGROUND_COLOR};
-`;
-
-export const ButtonImg = styled.div`
-  width: 24px;
-  height: 24px;
 `;
 
 export const PictureName = styled.p`

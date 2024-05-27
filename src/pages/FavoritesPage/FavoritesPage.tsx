@@ -8,8 +8,7 @@ import {
   StyledH1,
   EmphasizedH1,
 } from "./styled";
-
-// import { SmallCardContainer } from "components/SmallCardContainer";
+import { FavoritesContainer } from "components/FavoritesContainer";
 
 function FavoritesPage() {
   return (
@@ -28,7 +27,7 @@ function FavoritesPage() {
             <HeaderSubtext>Saved by you</HeaderSubtext>
             <StyledH2>Your favorites list</StyledH2>
           </div>
-          {/* <SmallCardContainer /> */}
+          <FavoritesContainer />
         </section>
       </StyledContent>
     </StyledMain>

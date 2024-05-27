@@ -1,7 +1,6 @@
 import {
   ACCENT_COLOR,
   BACKGROUND_COLOR_DARK,
-  HOVER_BACKGROUND_COLOR,
   WHITE_COLOR,
 } from "constants/colors";
 import { Link } from "react-router-dom";
@@ -50,17 +49,6 @@ export const CardVisibility = styled.p`
   font-weight: 700;
   line-height: 26.32px;
   letter-spacing: -0.01em;
-`;
-
-export const StyledButton = styled.button`
-  border-radius: 50%;
-  padding: 17.5px;
-  background-color: ${HOVER_BACKGROUND_COLOR};
-`;
-
-export const StyledImage = styled.div`
-  width: 24px;
-  height: 24px;
 `;
 
 export const ImageWrapper = styled(Link)`

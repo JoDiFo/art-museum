@@ -4,17 +4,23 @@ import { App } from "components/App";
 import { GlobalStyles } from "./globalStyles";
 import { BrowserRouter } from "react-router-dom";
 import { ErrorBoundary } from "components/ErrorBoundary";
+import { Provider } from "react-redux";
+import { configureStore } from "store";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
+
+const store = configureStore();
 
 root.render(
   <React.StrictMode>
     <GlobalStyles />
     <BrowserRouter>
       <ErrorBoundary>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </ErrorBoundary>
     </BrowserRouter>
   </React.StrictMode>,

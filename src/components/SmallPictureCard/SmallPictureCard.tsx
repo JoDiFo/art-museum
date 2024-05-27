@@ -1,23 +1,22 @@
-import BookmarkIcon from "assets/orange-bookmark-icon.svg";
-
 import {
   Author,
-  ButtonImg,
   CardVisibility,
   PictureName,
-  SmallCardButton,
   SmallCardImage,
   SmallCardWrapper,
 } from "./styled";
 
 import { IArtwork } from "types";
 import { Link } from "react-router-dom";
+import { AddToFavoritesButton } from "components/AddToFavoritesButton";
 
 interface ISmallPictureCardProps {
   artwork: IArtwork;
 }
 
 export function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
+  const handleClick = () => {};
+
   return (
     <Link to={"/artwork"} state={{ artworkId: artwork.id }}>
       <SmallCardWrapper>
@@ -35,11 +34,7 @@ export function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
           </CardVisibility>
         </div>
         <div className="button">
-          <SmallCardButton>
-            <ButtonImg>
-              <BookmarkIcon />
-            </ButtonImg>
-          </SmallCardButton>
+          <AddToFavoritesButton onClick={handleClick} />
         </div>
       </SmallCardWrapper>
     </Link>
