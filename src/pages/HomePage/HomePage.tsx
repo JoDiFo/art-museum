@@ -8,10 +8,10 @@ import {
 } from "./styled";
 
 import { SearchBar } from "components/SearchBar";
-import { SmallCardContainer } from "components/SmallCardContainer";
 import { PaginationContainer } from "components/PaginationContainer";
 import { useState } from "react";
 import { SortSelector } from "components/SortSelector";
+import { OtherWorks } from "components/OtherWorks";
 
 function HomePage() {
   const sortOptions = [
@@ -54,7 +54,7 @@ function HomePage() {
             <HeaderSubtext>Here some more</HeaderSubtext>
             <StyledH2>Other works for you</StyledH2>
           </div>
-          <SmallCardContainer />
+          <OtherWorks />
         </section>
       </StyledContent>
     </StyledMain>
