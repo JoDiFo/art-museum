@@ -5,7 +5,7 @@ export async function queryArtworks(
 ) {
   const baseUrl = "https://api.artic.edu/api/v1/artworks";
   const fieldsParam =
-    "fields=id,title,artist_title,thumbnail,is_public_domain,image_id";
+    "fields=id,title,artist_title,thumbnail,is_public_domain,image_id,date_end";
 
   const paginationParam =
     (page || page === 0) && limit && limit !== 0

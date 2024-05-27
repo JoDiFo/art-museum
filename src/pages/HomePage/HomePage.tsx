@@ -11,9 +11,18 @@ import { SearchBar } from "components/SearchBar";
 import { SmallCardContainer } from "components/SmallCardContainer";
 import { PaginationContainer } from "components/PaginationContainer";
 import { useState } from "react";
+import { SortSelector } from "components/SortSelector";
 
 function HomePage() {
+  const sortOptions = [
+    { value: "title", text: "Alphabet" },
+    { value: "date_end", text: "Publication date" },
+  ];
+
   const [searchString, setSearchString] = useState<string>("");
+  const [selectedSort, setSelectedSort] = useState<string>(
+    sortOptions[0].value,
+  );
 
   return (
     <StyledMain>
@@ -24,13 +33,21 @@ function HomePage() {
             <EmphasizedH1>art</EmphasizedH1> here!
           </StyledH1>
           <SearchBar setSearchString={(value) => setSearchString(value)} />
+          <SortSelector
+            sortOptions={sortOptions}
+            selected={selectedSort}
+            onSelect={(value) => setSelectedSort(value)}
+          />
         </div>
         <section className="gallery">
           <div>
             <HeaderSubtext>Topics for you</HeaderSubtext>
             <StyledH2>Our special gallery</StyledH2>
           </div>
-          <PaginationContainer searchString={searchString} />
+          <PaginationContainer
+            searchString={searchString}
+            sortOption={selectedSort}
+          />
         </section>
         <section className="other-works">
           <div>

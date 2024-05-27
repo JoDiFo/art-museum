@@ -6,10 +6,12 @@ import useQueryArtworks from "utils/hooks/useQueryArtworks";
 
 interface IPaginationContainerProps {
   searchString: string;
+  sortOption: string;
 }
 
 export function PaginationContainer({
   searchString,
+  sortOption,
 }: IPaginationContainerProps) {
   const [page, setPage] = useState<number>(1);
   const { loading, error, data } = useQueryArtworks(searchString, page, 3);
@@ -28,7 +30,15 @@ export function PaginationContainer({
           <Loader />
         </div>
       ) : (
-        <CardContainer artworks={data} />
+        <CardContainer
+          artworks={data.sort((a, b) => {
+            if (sortOption === "title") {
+              return a.title.localeCompare(b.title);
+            } else {
+              return a.date_end - b.date_end;
+            }
+          })}
+        />
       )}
       <Pagination
         currentPage={page}

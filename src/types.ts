@@ -8,4 +8,5 @@ export interface IArtwork {
   };
   is_public_domain: boolean;
   image_id: string;
+  date_end: number;
 }
