@@ -1,8 +1,10 @@
 import {
   ACCENT_COLOR,
+  BACKGROUND_COLOR_DARK,
   HOVER_BACKGROUND_COLOR,
   WHITE_COLOR,
 } from "constants/colors";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -11,8 +13,10 @@ export const StyledCard = styled.div`
 `;
 
 export const CardDescription = styled.div`
-  position: relative;
-  transform: translateY(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%) translateX(-50%);
   background-color: ${WHITE_COLOR};
   width: 87.4%;
   margin-inline: auto;
@@ -20,6 +24,7 @@ export const CardDescription = styled.div`
   padding: 17px 24px;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 0px 1px 1px ${BACKGROUND_COLOR_DARK};
 `;
 
 export const PictureName = styled.p`
@@ -56,4 +61,17 @@ export const StyledButton = styled.button`
 export const StyledImage = styled.div`
   width: 24px;
   height: 24px;
+`;
+
+export const ImageWrapper = styled(Link)`
+  display: block;
+  width: 387px;
+  height: 444px;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+  max-height: 100%;
+  object-position: top;
 `;

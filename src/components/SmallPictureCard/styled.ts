@@ -1,5 +1,6 @@
 import {
   ACCENT_COLOR,
+  BACKGROUND_COLOR_DARK,
   HOVER_BACKGROUND_COLOR,
   WHITE_COLOR,
 } from "constants/colors";
@@ -12,6 +13,8 @@ export const SmallCardWrapper = styled.div`
   align-items: center;
   background-color: ${WHITE_COLOR};
   padding: 16px 13px;
+  box-shadow: 0px 0px 1px 1px ${BACKGROUND_COLOR_DARK};
+  cursor: pointer;
 `;
 
 export const SmallCardImage = styled.img`

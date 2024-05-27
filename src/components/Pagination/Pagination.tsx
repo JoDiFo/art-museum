@@ -1,6 +1,11 @@
 import RightArrowIcon from "assets/right-arrow-icon.svg";
 
-import { StyledWrapper, SelectedSpan, StyledSpan } from "./styled";
+import {
+  StyledWrapper,
+  SelectedSpan,
+  StyledSpan,
+  PaginationWrapper,
+} from "./styled";
 
 interface IPaginationProps {
   currentPage: number;
@@ -16,23 +21,28 @@ export function Pagination({ currentPage, setPage }: IPaginationProps) {
   ];
 
   return (
-    <StyledWrapper>
-      {pages.map((pageNumber) =>
-        pageNumber === currentPage ? (
-          <SelectedSpan key={pageNumber}>{pageNumber}</SelectedSpan>
-        ) : (
-          <>
-            {pageNumber > 0 ? (
-              <StyledSpan onClick={() => setPage(pageNumber)} key={pageNumber}>
-                {pageNumber}
-              </StyledSpan>
-            ) : null}
-          </>
-        ),
-      )}
-      <StyledSpan onClick={() => setPage(currentPage + 1)}>
-        <RightArrowIcon />
-      </StyledSpan>
-    </StyledWrapper>
+    <PaginationWrapper>
+      <StyledWrapper>
+        {pages.map((pageNumber) =>
+          pageNumber === currentPage ? (
+            <SelectedSpan key={pageNumber}>{pageNumber}</SelectedSpan>
+          ) : (
+            <>
+              {pageNumber > 0 ? (
+                <StyledSpan
+                  onClick={() => setPage(pageNumber)}
+                  key={pageNumber}
+                >
+                  {pageNumber}
+                </StyledSpan>
+              ) : null}
+            </>
+          ),
+        )}
+        <StyledSpan onClick={() => setPage(currentPage + 1)}>
+          <RightArrowIcon />
+        </StyledSpan>
+      </StyledWrapper>
+    </PaginationWrapper>
   );
 }

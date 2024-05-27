@@ -22,3 +22,9 @@ export const SelectedSpan = styled(StyledSpan)`
   color: ${WHITE_COLOR};
   font-weight: 600;
 `;
+
+export const PaginationWrapper = styled.div`
+  display: flex;
+  justify-content: end;
+  margin-top: 94px;
+`;
