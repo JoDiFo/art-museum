@@ -9,7 +9,7 @@ export const StyledWrapper = styled.div`
 export const StyledSpan = styled.span`
   padding: 3px 10px;
   font-family: "Lexend Deca", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   line-height: 24px;
   text-align: left;

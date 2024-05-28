@@ -12,5 +12,5 @@ export const PRIMARY_COLOR: string = `#393939`;
 export const SECONDARY_COLOR: string = `#e0a449`;
 export const ACCENT_COLOR: string = `#f17900`;
 export const SELECTED_COLOR: string = `#fbd7b24d`;
-export const HEADER_LG: string = `700 64px/80px "Lexend Deca", sans-serif`;
-export const HEADER_MD: string = ` 400 32px/40px "Lexend Deca", sans-serif`;
+export const HEADER_LG: string = `700 4rem/80px "Lexend Deca", sans-serif`;
+export const HEADER_MD: string = ` 400 2rem/40px "Lexend Deca", sans-serif`;

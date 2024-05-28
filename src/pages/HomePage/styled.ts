@@ -22,7 +22,7 @@ export const StyledContent = styled.div`
 
 export const HeaderSubtext = styled.p`
   font-family: "Lexend Deca", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 20px;
   color: ${SECONDARY_COLOR};

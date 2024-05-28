@@ -19,7 +19,7 @@ export const InputBar = styled.input`
   border: none;
   outline: none;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 16.94px;
 `;

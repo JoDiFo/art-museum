@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   background: ${HEADER_BACKGROUND};
   color: ${WHITE_COLOR};
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 19.36px;
 `;
