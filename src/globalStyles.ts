@@ -4,12 +4,12 @@ import { BACKGROUND_COLOR } from "constants/colors";
 export const GlobalStyles = createGlobalStyle`
 @font-face {
   font-family: "Lexend Deca";
-  src: url(./assets/fonts/Lexend_Deca);
+  src: url(./assets/fonts/Lexend_Deca/LexendDeca-Regular.ttf);
 }
 
 @font-face {
   font-family: "Inter";
-  src: url(./assets/fonts/Inter);
+  src: url(./assets/fonts/Inter/Inter-Regular.ttf);
 }
 
 @keyframes loaderAnimation {
