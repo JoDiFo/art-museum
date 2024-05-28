@@ -1,5 +1,6 @@
 import {
   HOVER_BACKGROUND_COLOR,
+  SELECTED_HOVER_COLOR,
   SELECTED_COLOR,
   WHITE_COLOR,
 } from "constants/colors";
@@ -16,7 +17,8 @@ export const StyledButton = styled.button<IStyledButton>`
   background-color: ${(props) =>
     props.selected ? SELECTED_COLOR : WHITE_COLOR};
   &:hover {
-    background-color: ${HOVER_BACKGROUND_COLOR};
+    background-color: ${(props) =>
+      props.selected ? SELECTED_HOVER_COLOR : HOVER_BACKGROUND_COLOR};
   }
 `;
 
