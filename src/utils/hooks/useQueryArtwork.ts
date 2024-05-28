@@ -10,6 +10,10 @@ export default function useQueryArtwork(artworkIds: number[]) {
   console.log(data);
 
   useEffect(() => {
+    setLoading(true);
+    setData({} as IArtwork);
+    setError("");
+
     queryArtwork(artworkIds)
       .then((res) => {
         setData(res);

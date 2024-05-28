@@ -14,6 +14,10 @@ export default function useQueryArtworks(
   console.log(data);
 
   useEffect(() => {
+    setLoading(true);
+    setData([]);
+    setError("");
+
     queryArtworks(searchString, page, limit)
       .then((res) => {
         setData(res);

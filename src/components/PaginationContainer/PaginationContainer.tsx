@@ -3,6 +3,7 @@ import { Loader } from "components/Loader";
 import { Pagination } from "components/Pagination";
 import { useState } from "react";
 import useQueryArtworks from "utils/hooks/useQueryArtworks";
+import { LoaderWrapper } from "./styled";
 
 interface IPaginationContainerProps {
   searchString: string;
@@ -16,34 +17,49 @@ export function PaginationContainer({
   const [page, setPage] = useState<number>(1);
   const { loading, error, data } = useQueryArtworks(searchString, page, 3);
 
-  return (
-    <div>
-      {error ? <p>{error}</p> : null}
-      {loading ? (
-        <div
-          style={{
-            padding: "20px 0",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
+  if (loading) {
+    return (
+      <>
+        <LoaderWrapper>
           <Loader />
-        </div>
-      ) : (
-        <CardContainer
-          artworks={data.sort((a, b) => {
-            if (sortOption === "title") {
-              return a.title.localeCompare(b.title);
-            } else {
-              return a.date_end - b.date_end;
-            }
-          })}
+        </LoaderWrapper>
+        <Pagination
+          currentPage={page}
+          setPage={(pageNumber) => setPage(pageNumber)}
         />
-      )}
+      </>
+    );
+  }
+
+  if (error) {
+    return (
+      <>
+        <LoaderWrapper>
+          <h1>{error}</h1>;
+        </LoaderWrapper>
+        <Pagination
+          currentPage={page}
+          setPage={(pageNumber) => setPage(pageNumber)}
+        />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <CardContainer
+        artworks={data.sort((a, b) => {
+          if (sortOption === "title") {
+            return a.title.localeCompare(b.title);
+          } else {
+            return a.date_end - b.date_end;
+          }
+        })}
+      />
       <Pagination
         currentPage={page}
         setPage={(pageNumber) => setPage(pageNumber)}
       />
-    </div>
+    </>
   );
 }
