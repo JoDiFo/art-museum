@@ -1,4 +1,4 @@
-import BookmarkIcon from "assets/orange-bookmark-icon.svg";
+import bookmarkIcon from "assets/orange-bookmark-icon.svg?url";
 import { StyledButton, StyledImage } from "./styled";
 
 interface IAddToFavoritesButtonProps {
@@ -9,7 +9,7 @@ export function AddToFavoritesButton({ onClick }: IAddToFavoritesButtonProps) {
   return (
     <StyledButton onClick={onClick}>
       <StyledImage>
-        <BookmarkIcon />
+        <img src={bookmarkIcon} alt="" />
       </StyledImage>
     </StyledButton>
   );
