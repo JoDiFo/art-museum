@@ -13,4 +13,10 @@ export const StyledContent = styled.div`
   width: calc(100% * 2 / 3);
   display: flex;
   justify-content: space-between;
+
+  @media (width <= 650px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
