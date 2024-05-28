@@ -5,7 +5,7 @@ import { queryArtwork } from "utils/api/queryArtwork";
 export default function useQueryArtwork(artworkIds: number[]) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
-  const [data, setData] = useState<IArtwork>();
+  const [data, setData] = useState<IArtwork[]>();
 
   console.log(data);
 

@@ -13,8 +13,8 @@ import { PageLoader } from "components/PageLoader";
 import { useLocation } from "react-router-dom";
 
 function DetailedViewPage() {
-  const artworkId = useLocation().state.artworkId;
-  const { loading, error, data: artwork } = useQueryArtwork(artworkId);
+  const artworkId: number = useLocation().state.artworkId;
+  const { loading, error, data: artwork } = useQueryArtwork([artworkId]);
 
   if (loading) {
     return <PageLoader />;

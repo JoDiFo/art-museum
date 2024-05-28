@@ -9,13 +9,18 @@ import {
 import { IArtwork } from "types";
 import { Link } from "react-router-dom";
 import { AddToFavoritesButton } from "components/AddToFavoritesButton";
+import { useDispatch } from "react-redux";
 
 interface ISmallPictureCardProps {
   artwork: IArtwork;
 }
 
 export function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
-  const handleClick = () => {};
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch({ type: "ADD_ARTWORK", payload: artwork.id });
+  };
 
   return (
     <Link to={"/artwork"} state={{ artworkId: artwork.id }}>
