@@ -14,6 +14,11 @@ export const StyledContent = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media (width < 1000px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
 `;
 
 export const PictureData = styled.div`

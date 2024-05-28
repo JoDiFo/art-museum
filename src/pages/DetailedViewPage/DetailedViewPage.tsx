@@ -59,7 +59,7 @@ function DetailedViewPage() {
               {artist?.birth_date}-{artist?.death_date}
             </Date>
           </div>
-          <div>
+          <div style={{ marginTop: "2.5rem" }}>
             <StyledH2>Overview</StyledH2>
             <p>
               <Field>Artist nationality:</Field>{" "}
