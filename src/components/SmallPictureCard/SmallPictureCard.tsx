@@ -42,7 +42,7 @@ function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
             {artwork.is_public_domain ? "Public" : "Private"}
           </CardVisibility>
         </div>
-        <div className="button">
+        <div className="button" onClick={(e) => e.preventDefault()}>
           <AddToFavoritesButton onClick={handleClick} />
         </div>
       </SmallCardWrapper>
