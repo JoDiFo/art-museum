@@ -1,1 +1,1 @@
-export { SmallPictureCard } from "./SmallPictureCard";
+export { SmallPictureCardMemo as SmallPictureCard } from "./SmallPictureCard";

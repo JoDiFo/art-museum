@@ -1,1 +1,1 @@
-export { PaginationContainer } from "./PaginationContainer";
+export { PaginationContainerMemo as PaginationContainer } from "./PaginationContainer";

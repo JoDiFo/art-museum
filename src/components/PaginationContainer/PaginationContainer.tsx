@@ -1,7 +1,7 @@
 import { CardContainer } from "components/CardContainer";
 import { Loader } from "components/Loader";
 import { Pagination } from "components/Pagination";
-import { useState } from "react";
+import { memo, useState } from "react";
 import useQueryArtworks from "utils/hooks/useQueryArtworks";
 import { LoaderWrapper } from "./styled";
 
@@ -10,7 +10,7 @@ interface IPaginationContainerProps {
   sortOption: string;
 }
 
-export function PaginationContainer({
+function PaginationContainer({
   searchString,
   sortOption,
 }: IPaginationContainerProps) {
@@ -63,3 +63,5 @@ export function PaginationContainer({
     </>
   );
 }
+
+export const PaginationContainerMemo = memo(PaginationContainer);

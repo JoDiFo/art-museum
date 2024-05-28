@@ -1,1 +1,1 @@
-export { OtherWorks } from "./OtherWorks";
+export { OtherWorksMemo as OtherWorks } from "./OtherWorks";

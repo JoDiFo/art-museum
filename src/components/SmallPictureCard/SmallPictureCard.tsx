@@ -10,12 +10,13 @@ import { IArtwork } from "types";
 import { Link } from "react-router-dom";
 import { AddToFavoritesButton } from "components/AddToFavoritesButton";
 import { useDispatch } from "react-redux";
+import { memo } from "react";
 
 interface ISmallPictureCardProps {
   artwork: IArtwork;
 }
 
-export function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
+function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -45,3 +46,5 @@ export function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
     </Link>
   );
 }
+
+export const SmallPictureCardMemo = memo(SmallPictureCard);

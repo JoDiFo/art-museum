@@ -1,1 +1,1 @@
-export { CardContainer } from "./CardContainer";
+export { CardContainerMemo as CardContainer } from "./CardContainer";

@@ -2,12 +2,13 @@ import { PictureCard } from "components/PictureCard";
 
 import { StyledWrapper } from "./styled";
 import { IArtwork } from "types";
+import { memo } from "react";
 
 interface ICardContainerProps {
   artworks: IArtwork[];
 }
 
-export function CardContainer({ artworks }: ICardContainerProps) {
+function CardContainer({ artworks }: ICardContainerProps) {
   return (
     <StyledWrapper>
       {artworks.map((artwork) => (
@@ -16,3 +17,5 @@ export function CardContainer({ artworks }: ICardContainerProps) {
     </StyledWrapper>
   );
 }
+
+export const CardContainerMemo = memo(CardContainer);

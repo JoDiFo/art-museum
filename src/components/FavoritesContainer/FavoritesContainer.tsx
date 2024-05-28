@@ -1,10 +1,11 @@
 import { PageLoader } from "components/PageLoader";
 import { SmallCardContainer } from "components/SmallCardContainer";
+import { memo } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "store/reducers/favoritesReducer";
 import useQueryMultiple from "utils/hooks/useQueryMultiple";
 
-export function FavoritesContainer() {
+function FavoritesContainer() {
   const favoritesIds = useSelector(
     (state: RootState) => state.favoritesReducer.favorites,
   );
@@ -27,3 +28,5 @@ export function FavoritesContainer() {
 
   return <SmallCardContainer artworks={data ?? []} />;
 }
+
+export const FavoritesContainerMemo = memo(FavoritesContainer);

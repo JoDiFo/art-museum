@@ -1,1 +1,1 @@
-export { FavoritesContainer } from "./FavoritesContainer";
+export { FavoritesContainerMemo as FavoritesContainer } from "./FavoritesContainer";

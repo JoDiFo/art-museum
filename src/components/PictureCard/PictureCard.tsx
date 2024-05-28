@@ -9,7 +9,7 @@ import {
 } from "./styled";
 
 import { IArtwork } from "types";
-import { useState } from "react";
+import { memo, useState } from "react";
 import { AddToFavoritesButton } from "components/AddToFavoritesButton";
 import { useDispatch } from "react-redux";
 
@@ -17,7 +17,7 @@ interface IPictureCardProps {
   artwork: IArtwork;
 }
 
-export function PictureCard({ artwork }: IPictureCardProps) {
+function PictureCard({ artwork }: IPictureCardProps) {
   const dispatch = useDispatch();
   const [showDescription, setShowDescription] = useState(false);
 
@@ -58,3 +58,5 @@ export function PictureCard({ artwork }: IPictureCardProps) {
     </StyledCard>
   );
 }
+
+export const PictureCardMemo = memo(PictureCard);
