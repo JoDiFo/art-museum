@@ -10,8 +10,9 @@ import {
 import { IArtwork } from "types";
 import { Link } from "react-router-dom";
 import { AddToFavoritesButton } from "components/AddToFavoritesButton";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { memo } from "react";
+import { RootState } from "store/reducers/favoritesReducer";
 
 interface ISmallPictureCardProps {
   artwork: IArtwork;
@@ -19,9 +20,15 @@ interface ISmallPictureCardProps {
 
 function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
   const dispatch = useDispatch();
+  const favoritesIds = useSelector(
+    (state: RootState) => state.favoritesReducer.favorites,
+  );
 
-  const handleClick = () => {
-    dispatch({ type: "ADD_ARTWORK", payload: artwork.id });
+  const handleClick = (isFavorite: boolean) => {
+    dispatch({
+      type: isFavorite ? "REMOVE_ARTWORK" : "ADD_ARTWORK",
+      payload: artwork.id,
+    });
   };
 
   return (
@@ -44,7 +51,10 @@ function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
           </CardVisibility>
         </CardDescription>
         <div className="button" onClick={(e) => e.preventDefault()}>
-          <AddToFavoritesButton onClick={handleClick} />
+          <AddToFavoritesButton
+            isFavorite={favoritesIds.some((value) => value === artwork.id)}
+            onClick={handleClick}
+          />
         </div>
       </SmallCardWrapper>
     </Link>

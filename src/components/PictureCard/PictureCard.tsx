@@ -11,7 +11,8 @@ import {
 import { IArtwork } from "types";
 import { memo, useState } from "react";
 import { AddToFavoritesButton } from "components/AddToFavoritesButton";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "store/reducers/favoritesReducer";
 
 interface IPictureCardProps {
   artwork: IArtwork;
@@ -19,6 +20,9 @@ interface IPictureCardProps {
 
 function PictureCard({ artwork }: IPictureCardProps) {
   const dispatch = useDispatch();
+  const favoritesIds = useSelector(
+    (state: RootState) => state.favoritesReducer.favorites,
+  );
   const [showDescription, setShowDescription] = useState(false);
 
   const handleMouseOver = () => {
@@ -29,8 +33,11 @@ function PictureCard({ artwork }: IPictureCardProps) {
     setShowDescription(false);
   };
 
-  const handleClick = () => {
-    dispatch({ type: "ADD_ARTWORK", payload: artwork.id });
+  const handleClick = (isFavorite: boolean) => {
+    dispatch({
+      type: isFavorite ? "REMOVE_ARTWORK" : "ADD_ARTWORK",
+      payload: artwork.id,
+    });
   };
 
   return (
@@ -54,7 +61,10 @@ function PictureCard({ artwork }: IPictureCardProps) {
             </CardVisibility>
           </div>
           <div className="right">
-            <AddToFavoritesButton onClick={handleClick} />
+            <AddToFavoritesButton
+              isFavorite={favoritesIds.some((value) => value === artwork.id)}
+              onClick={handleClick}
+            />
           </div>
         </CardDescription>
       ) : null}
