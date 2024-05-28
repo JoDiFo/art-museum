@@ -8,8 +8,8 @@ import styled from "styled-components";
 
 export const SmallCardWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   background-color: ${WHITE_COLOR};
   padding: 16px 13px;
   box-shadow: 0px 0px 1px 1px ${BACKGROUND_COLOR_DARK};
@@ -27,6 +27,9 @@ export const PictureName = styled.p`
   font-weight: 500;
   line-height: 26.32px;
   letter-spacing: -0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const Author = styled.p`
@@ -44,4 +47,9 @@ export const CardVisibility = styled.p`
   font-weight: 700;
   line-height: 26.32px;
   letter-spacing: -0.01em;
+`;
+
+export const CardDescription = styled.div`
+  flex-grow: 1;
+  min-width: 0;
 `;

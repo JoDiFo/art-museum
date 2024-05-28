@@ -46,7 +46,7 @@ function PictureCard({ artwork }: IPictureCardProps) {
       </ImageWrapper>
       {showDescription ? (
         <CardDescription>
-          <div className="left">
+          <div style={{ minWidth: "0" }}>
             <PictureName>{artwork.title}</PictureName>
             <Author>{artwork.artist_title || "unknown"}</Author>
             <CardVisibility>

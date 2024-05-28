@@ -1,5 +1,6 @@
 import {
   Author,
+  CardDescription,
   CardVisibility,
   PictureName,
   SmallCardImage,
@@ -35,13 +36,13 @@ function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
             alt={artwork.thumbnail?.alt_text}
           />
         </div>
-        <div className="description">
+        <CardDescription>
           <PictureName>{artwork.title}</PictureName>
           <Author>{artwork.artist_title ?? "unknown"}</Author>
           <CardVisibility>
             {artwork.is_public_domain ? "Public" : "Private"}
           </CardVisibility>
-        </div>
+        </CardDescription>
         <div className="button" onClick={(e) => e.preventDefault()}>
           <AddToFavoritesButton onClick={handleClick} />
         </div>

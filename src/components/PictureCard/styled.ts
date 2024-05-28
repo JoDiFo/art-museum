@@ -33,6 +33,9 @@ export const PictureName = styled.p`
   font-weight: 500;
   line-height: 26.32px;
   letter-spacing: -0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const Author = styled.p`
