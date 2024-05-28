@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const SearchBarWrapper = styled.div`
-  width: 762px;
+  width: 90%;
   position: relative;
   margin-inline: auto;
+
+  @media (width < 800px) {
+    width: 100%;
+  }
 `;
 
 export const InputBar = styled.input`
