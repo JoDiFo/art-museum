@@ -30,6 +30,7 @@ export const PictureData = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  position: relative;
   flex-basis: 50%;
   width: 497px;
   height: 570px;
@@ -72,4 +73,10 @@ export const FieldData = styled.span`
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+`;
+
+export const ButtonWrapper = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
 `;

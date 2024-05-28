@@ -10,20 +10,46 @@ import {
   FieldData,
   Artist,
   Date,
+  ButtonWrapper,
 } from "./styled";
 import { PageLoader } from "components/PageLoader";
 import { useLocation } from "react-router-dom";
 import useQueryArtist from "utils/hooks/useQueryArtist";
+import { useState } from "react";
+import { AddToFavoritesButton } from "components/AddToFavoritesButton";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "store/reducers/favoritesReducer";
 
 function DetailedViewPage() {
   const artworkId: number = useLocation().state.artworkId;
   const artistId: number = useLocation().state.artistId;
+  const dispatch = useDispatch();
+  const favoritesIds = useSelector(
+    (state: RootState) => state.favoritesReducer.favorites,
+  );
   const { loading, error, data: artwork } = useQueryArtwork(artworkId);
   const {
     loading: loadingArtist,
     error: errorArtist,
     data: artist,
   } = useQueryArtist(artistId);
+
+  const [showButton, setShowButton] = useState(false);
+
+  const handleMouseOver = () => {
+    setShowButton(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowButton(false);
+  };
+
+  const handleClick = (isFavorite: boolean) => {
+    dispatch({
+      type: isFavorite ? "REMOVE_ARTWORK" : "ADD_ARTWORK",
+      payload: artworkId,
+    });
+  };
 
   if (loading && loadingArtist) {
     return <PageLoader />;
@@ -45,11 +71,22 @@ function DetailedViewPage() {
   return (
     <StyledMain>
       <StyledContent>
-        <ImageWrapper>
+        <ImageWrapper
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseLeave}
+        >
           <Image
             src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
             alt={artwork.thumbnail?.alt_text}
           />
+          {showButton ? (
+            <ButtonWrapper>
+              <AddToFavoritesButton
+                isFavorite={favoritesIds.some((value) => value === artwork.id)}
+                onClick={handleClick}
+              />
+            </ButtonWrapper>
+          ) : null}
         </ImageWrapper>
         <PictureData>
           <div>
