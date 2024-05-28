@@ -19,9 +19,9 @@ export default function useQueryArtworks(
         setData(res);
         setLoading(false);
       })
-      .catch((err) => {
+      .catch((err: Error) => {
         setLoading(false);
-        setError(err);
+        setError(err.message);
       });
   }, [searchString, page]);
 
