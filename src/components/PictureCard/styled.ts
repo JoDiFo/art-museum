@@ -9,6 +9,7 @@ import styled from "styled-components";
 
 export const StyledCard = styled.div`
   position: relative;
+  flex-basis: 30%;
 `;
 
 export const CardDescription = styled.div`
@@ -53,13 +54,13 @@ export const CardVisibility = styled.p`
 
 export const ImageWrapper = styled(Link)`
   display: block;
-  width: 387px;
-  height: 444px;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Image = styled.img`
   width: 100%;
   object-fit: cover;
-  max-height: 100%;
+  height: 100%;
   object-position: top;
 `;

@@ -26,5 +26,9 @@ export const SelectedSpan = styled(StyledSpan)`
 export const PaginationWrapper = styled.div`
   display: flex;
   justify-content: end;
-  margin-top: 94px;
+  margin-top: 6rem;
+
+  @media (width <= 1200px) {
+    justify-content: center;
+  }
 `;
