@@ -42,4 +42,12 @@ export const StyledH1 = styled.h1`
 
 export const EmphasizedH1 = styled.span`
   color: ${ACCENT_COLOR};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const StyledImg = styled.img`
+  width: 4rem;
+  height: 4rem;
 `;

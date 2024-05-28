@@ -27,12 +27,14 @@ function HomePage() {
   return (
     <StyledMain>
       <StyledContent>
-        <div>
+        <div style={{ marginTop: "7.5rem" }}>
           <StyledH1>
-            let&lsquo;s find some <br />
+            let&apos;s find some <br />
             <EmphasizedH1>art</EmphasizedH1> here!
           </StyledH1>
-          <SearchBar setSearchString={(value) => setSearchString(value)} />
+          <div style={{ marginTop: "4.5rem" }}>
+            <SearchBar setSearchString={(value) => setSearchString(value)} />
+          </div>
           <SortSelector
             sortOptions={sortOptions}
             selected={selectedSort}
@@ -40,7 +42,7 @@ function HomePage() {
           />
         </div>
         <section className="gallery">
-          <div>
+          <div style={{ marginBottom: "2.5rem" }}>
             <HeaderSubtext>Topics for you</HeaderSubtext>
             <StyledH2>Our special gallery</StyledH2>
           </div>
@@ -49,8 +51,8 @@ function HomePage() {
             sortOption={selectedSort}
           />
         </section>
-        <section className="other-works">
-          <div>
+        <section className="other-works" style={{ marginTop: "7.5rem" }}>
+          <div style={{ marginBottom: "2.5rem" }}>
             <HeaderSubtext>Here some more</HeaderSubtext>
             <StyledH2>Other works for you</StyledH2>
           </div>
