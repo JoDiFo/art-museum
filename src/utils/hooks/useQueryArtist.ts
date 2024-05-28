@@ -1,29 +1,29 @@
 import { useEffect, useState } from "react";
-import { IArtwork } from "types";
-import { queryMultiple } from "utils/api/queryMultiple";
+import { IArtist } from "types";
+import { queryArtist } from "utils/api/queryArtist";
 
-export default function useQueryArtwork(artworkIds: number[]) {
+export default function useQueryArtist(artistId: number) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
-  const [data, setData] = useState<IArtwork[]>();
+  const [data, setData] = useState<IArtist>();
 
   console.log(data);
 
   useEffect(() => {
     setLoading(true);
-    setData([]);
+    setData({} as IArtist);
     setError("");
 
-    queryMultiple(artworkIds)
-      .then((res) => {
-        setData(res);
+    queryArtist(artistId)
+      .then((res: IArtist[]) => {
+        setData(res[0]);
         setLoading(false);
       })
       .catch((err: Error) => {
         setLoading(false);
         setError(err.message);
       });
-  }, [artworkIds]);
+  }, [artistId]);
 
   return { loading, error, data };
 }

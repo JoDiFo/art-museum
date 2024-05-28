@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import { IArtwork } from "types";
+import { IDetailedArtwork } from "types";
 import { queryArtwork } from "utils/api/queryArtwork";
 
-export default function useQueryArtwork(artworkIds: number[]) {
+export default function useQueryArtwork(artworkId: number) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
-  const [data, setData] = useState<IArtwork>();
+  const [data, setData] = useState<IDetailedArtwork>();
 
   console.log(data);
 
   useEffect(() => {
     setLoading(true);
-    setData({} as IArtwork);
+    setData({} as IDetailedArtwork);
     setError("");
 
-    queryArtwork(artworkIds)
+    queryArtwork(artworkId)
       .then((res) => {
         setData(res);
         setLoading(false);
@@ -23,7 +23,7 @@ export default function useQueryArtwork(artworkIds: number[]) {
         setLoading(false);
         setError(err.message);
       });
-  }, [artworkIds]);
+  }, [artworkId]);
 
   return { loading, error, data };
 }

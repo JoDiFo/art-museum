@@ -35,12 +35,19 @@ export const Image = styled.img`
   object-fit: contain;
 `;
 
-export const HeaderSubtext = styled.p`
+export const Artist = styled.p`
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: ${SECONDARY_COLOR};
+`;
+
+export const Date = styled.p`
   font-family: "Lexend Deca", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 20px;
-  color: ${SECONDARY_COLOR};
 `;
 
 export const StyledH2 = styled.h2`
@@ -49,4 +56,15 @@ export const StyledH2 = styled.h2`
 
 export const Field = styled.span`
   color: ${SECONDARY_COLOR};
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+`;
+
+export const FieldData = styled.span`
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 `;

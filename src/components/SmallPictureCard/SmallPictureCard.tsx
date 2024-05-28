@@ -24,7 +24,10 @@ function SmallPictureCard({ artwork }: ISmallPictureCardProps) {
   };
 
   return (
-    <Link to={"/artwork"} state={{ artworkId: artwork.id }}>
+    <Link
+      to={"/artwork"}
+      state={{ artworkId: artwork.id, artistId: artwork.artist_id }}
+    >
       <SmallCardWrapper>
         <div className="image">
           <SmallCardImage

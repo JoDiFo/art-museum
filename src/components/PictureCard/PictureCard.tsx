@@ -35,7 +35,10 @@ function PictureCard({ artwork }: IPictureCardProps) {
 
   return (
     <StyledCard onMouseOver={handleMouseOver} onMouseOut={handleMouseLeave}>
-      <ImageWrapper to={`/artwork`} state={{ artworkId: artwork.id }}>
+      <ImageWrapper
+        to={`/artwork`}
+        state={{ artworkId: artwork.id, artistId: artwork.artist_id }}
+      >
         <Image
           src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
           alt={artwork.thumbnail?.alt_text}
