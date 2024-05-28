@@ -7,11 +7,9 @@ export async function queryMultiple(artworkIds: number[]) {
     artworkIds.length > 1 ? `?ids=${artworkIds}&` : `/${artworkIds[0]}?`;
 
   const req = `${baseUrl}${idParam}${fieldsParam}`;
-  console.log(req);
 
   const res = await fetch(req);
   const data = await res.json();
 
-  console.log(data.data);
   return data.data;
 }

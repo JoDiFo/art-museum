@@ -11,14 +11,14 @@ export default function useQueryArtworks(
   const [error, setError] = useState<string>("");
   const [data, setData] = useState<IArtwork[]>([]);
 
-  console.log(data);
-
   useEffect(() => {
     setLoading(true);
     setData([]);
     setError("");
+    const abortController = new AbortController();
+    const signal = abortController.signal;
 
-    queryArtworks(searchString, page, limit)
+    queryArtworks(searchString, page, limit, signal)
       .then((res) => {
         setData(res);
         setLoading(false);
@@ -27,7 +27,7 @@ export default function useQueryArtworks(
         setLoading(false);
         setError(err.message);
       });
-  }, [searchString, page]);
+  }, [searchString, page, limit]);
 
   return { loading, error, data };
 }

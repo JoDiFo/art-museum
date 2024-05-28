@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(
 const store = configureStore();
 
 root.render(
-  <React.StrictMode>
+  <>
     <GlobalStyles />
     <BrowserRouter>
       <ErrorBoundary>
@@ -23,5 +23,5 @@ root.render(
         </Provider>
       </ErrorBoundary>
     </BrowserRouter>
-  </React.StrictMode>,
+  </>,
 );

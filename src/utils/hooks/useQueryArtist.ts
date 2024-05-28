@@ -7,8 +7,6 @@ export default function useQueryArtist(artistId: number) {
   const [error, setError] = useState<string>("");
   const [data, setData] = useState<IArtist>();
 
-  console.log(data);
-
   useEffect(() => {
     setLoading(true);
     setData({} as IArtist);

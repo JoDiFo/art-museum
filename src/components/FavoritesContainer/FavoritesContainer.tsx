@@ -12,8 +12,6 @@ function FavoritesContainer() {
 
   const { loading, error, data } = useQueryMultiple(favoritesIds);
 
-  console.log(favoritesIds);
-
   if (loading) {
     return <PageLoader />;
   }

@@ -7,8 +7,6 @@ export default function useQueryArtwork(artworkIds: number[]) {
   const [error, setError] = useState<string>("");
   const [data, setData] = useState<IArtwork[]>();
 
-  console.log(data);
-
   useEffect(() => {
     setLoading(true);
     setData([]);
