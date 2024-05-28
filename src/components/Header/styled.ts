@@ -26,10 +26,22 @@ export const RightBlock = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+
+  @media (width <= 750px) {
+    display: none;
+  }
 `;
 
 export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 4px;
+`;
+
+export const BurgerWrapper = styled.div`
+  display: none;
+
+  @media (width <= 750px) {
+    display: inline;
+  }
 `;
