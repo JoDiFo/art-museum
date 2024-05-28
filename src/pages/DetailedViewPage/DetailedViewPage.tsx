@@ -48,7 +48,7 @@ function DetailedViewPage() {
         <ImageWrapper>
           <Image
             src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
-            alt={artwork.thumbnail.alt_text}
+            alt={artwork.thumbnail?.alt_text}
           />
         </ImageWrapper>
         <PictureData>
