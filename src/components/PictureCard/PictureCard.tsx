@@ -6,6 +6,7 @@ import {
   StyledCard,
   ImageWrapper,
   Image,
+  Left,
 } from "./styled";
 
 import { IArtwork } from "types";
@@ -53,13 +54,13 @@ function PictureCard({ artwork }: IPictureCardProps) {
       </ImageWrapper>
       {showDescription ? (
         <CardDescription>
-          <div style={{ minWidth: "0" }}>
+          <Left>
             <PictureName>{artwork.title}</PictureName>
             <Author>{artwork.artist_title || "unknown"}</Author>
             <CardVisibility>
               {artwork.is_public_domain ? "Public" : "Private"}
             </CardVisibility>
-          </div>
+          </Left>
           <div className="right">
             <AddToFavoritesButton
               isFavorite={favoritesIds.some((value) => value === artwork.id)}

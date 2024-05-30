@@ -8,6 +8,8 @@ import {
   StyledH1,
   EmphasizedH1,
   StyledImg,
+  SectionHeading,
+  PageHeading,
 } from "./styled";
 import { FavoritesContainer } from "components/FavoritesContainer";
 
@@ -15,19 +17,19 @@ function FavoritesPage() {
   return (
     <StyledMain>
       <StyledContent>
-        <div style={{ marginBottom: "7.5rem", marginTop: "7.5rem" }}>
+        <PageHeading>
           <StyledH1>
             here are your <br />
             <EmphasizedH1>
               <StyledImg src={bookmarkIcon} alt="" /> favorites
             </EmphasizedH1>
           </StyledH1>
-        </div>
+        </PageHeading>
         <section className="favorites-works">
-          <div style={{ marginBottom: "2.5rem" }}>
+          <SectionHeading>
             <HeaderSubtext>Saved by you</HeaderSubtext>
             <StyledH2>Your favorites list</StyledH2>
-          </div>
+          </SectionHeading>
           <FavoritesContainer />
         </section>
       </StyledContent>

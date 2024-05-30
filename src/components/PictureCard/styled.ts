@@ -67,3 +67,7 @@ export const Image = styled.img`
   height: 100%;
   object-position: top;
 `;
+
+export const Left = styled.div`
+  min-width: 0;
+`;

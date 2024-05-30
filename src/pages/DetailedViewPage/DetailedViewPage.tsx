@@ -11,6 +11,8 @@ import {
   Artist,
   Date,
   ButtonWrapper,
+  ErrorMessage,
+  OverviewBlock,
 } from "./styled";
 import { PageLoader } from "components/PageLoader";
 import { useLocation } from "react-router-dom";
@@ -58,8 +60,8 @@ function DetailedViewPage() {
   if (error || errorArtist) {
     return (
       <StyledMain>
-        <h1 style={{ textAlign: "center" }}>{error}</h1>
-        <h1 style={{ textAlign: "center" }}>{errorArtist}</h1>
+        <ErrorMessage>{error}</ErrorMessage>
+        <ErrorMessage>{errorArtist}</ErrorMessage>
       </StyledMain>
     );
   }
@@ -96,7 +98,7 @@ function DetailedViewPage() {
               {artist?.birth_date}-{artist?.death_date}
             </Date>
           </div>
-          <div style={{ marginTop: "2.5rem" }}>
+          <OverviewBlock>
             <StyledH2>Overview</StyledH2>
             <p>
               <Field>Artist nationality:</Field>{" "}
@@ -117,7 +119,7 @@ function DetailedViewPage() {
             <FieldData>
               {artwork?.is_public_domain ? "Public" : "Private"}
             </FieldData>
-          </div>
+          </OverviewBlock>
         </PictureData>
       </StyledContent>
     </StyledMain>

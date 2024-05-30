@@ -80,3 +80,11 @@ export const ButtonWrapper = styled.div`
   top: 10px;
   right: 10px;
 `;
+
+export const ErrorMessage = styled.h1`
+  text-align: center;
+`;
+
+export const OverviewBlock = styled.div`
+  margin-top: 2.5rem;
+`;

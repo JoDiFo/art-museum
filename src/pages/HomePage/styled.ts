@@ -43,3 +43,15 @@ export const StyledH1 = styled.h1`
 export const EmphasizedH1 = styled.span`
   color: ${ACCENT_COLOR};
 `;
+
+export const PageHeading = styled.div`
+  margin-top: 7.5rem;
+`;
+
+export const SearchBarWrapper = styled.div`
+  margin-top: 4.5rem;
+`;
+
+export const SectionHeading = styled.div`
+  margin-bottom: 2.5rem;
+`;

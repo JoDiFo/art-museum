@@ -51,3 +51,12 @@ export const StyledImg = styled.img`
   width: 4rem;
   height: 4rem;
 `;
+
+export const SectionHeading = styled.div`
+  margin-bottom: 2.5rem;
+`;
+
+export const PageHeading = styled.div`
+  margin-bottom: 7.5rem;
+  margin-top: 7.5rem;
+`;
