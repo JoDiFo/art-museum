@@ -1,4 +1,4 @@
-import { WHITE_COLOR } from "constants/colors";
+import { colors } from "constants/colors";
 import styled from "styled-components";
 
 export const Menu = styled.div`
@@ -13,7 +13,7 @@ export const Menu = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  background-color: ${WHITE_COLOR};
+  background-color: ${colors.WHITE};
   flex-basis: 15%;
   border-radius: 5px;
 `;

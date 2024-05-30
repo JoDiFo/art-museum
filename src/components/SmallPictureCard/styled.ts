@@ -1,8 +1,4 @@
-import {
-  ACCENT_COLOR,
-  BACKGROUND_COLOR_DARK,
-  WHITE_COLOR,
-} from "constants/colors";
+import { colors } from "constants/colors";
 
 import styled from "styled-components";
 
@@ -10,9 +6,9 @@ export const SmallCardWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: ${WHITE_COLOR};
+  background-color: ${colors.WHITE};
   padding: 16px 13px;
-  box-shadow: 0px 0px 1px 1px ${BACKGROUND_COLOR_DARK};
+  box-shadow: 0px 0px 1px 1px ${colors.BACKGROUND_DARK};
   cursor: pointer;
 `;
 
@@ -38,7 +34,7 @@ export const Author = styled.p`
   font-weight: 400;
   line-height: 26.32px;
   letter-spacing: -0.01em;
-  color: ${ACCENT_COLOR};
+  color: ${colors.ACCENT};
 `;
 
 export const CardVisibility = styled.p`

@@ -1,4 +1,4 @@
-import { SECONDARY_COLOR } from "constants/colors";
+import { colors } from "constants/colors";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -20,7 +20,7 @@ export const Menu = styled.div`
 `;
 
 export const MenuItem = styled(Link)`
-  color: ${SECONDARY_COLOR};
+  color: ${colors.SECONDARY};
   font-family: "Lexend Deca", sans-serif;
   font-size: 2.4rem;
   font-weight: 700;

@@ -1,8 +1,4 @@
-import {
-  ACCENT_COLOR,
-  BACKGROUND_COLOR_DARK,
-  WHITE_COLOR,
-} from "constants/colors";
+import { colors } from "constants/colors";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
@@ -17,14 +13,14 @@ export const CardDescription = styled.div`
   bottom: 0;
   left: 50%;
   transform: translateY(50%) translateX(-50%);
-  background-color: ${WHITE_COLOR};
+  background-color: ${colors.WHITE};
   width: 87.4%;
   margin-inline: auto;
   display: flex;
   padding: 17px 24px;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 0px 1px 1px ${BACKGROUND_COLOR_DARK};
+  box-shadow: 0px 0px 1px 1px ${colors.BACKGROUND_DARK};
 `;
 
 export const PictureName = styled.p`
@@ -44,7 +40,7 @@ export const Author = styled.p`
   font-weight: 400;
   line-height: 26.32px;
   letter-spacing: -0.01em;
-  color: ${ACCENT_COLOR};
+  color: ${colors.ACCENT};
 `;
 
 export const CardVisibility = styled.p`

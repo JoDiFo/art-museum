@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { BACKGROUND_COLOR } from "constants/colors";
+import { colors } from "constants/colors";
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
@@ -57,7 +57,7 @@ img {
 }
 
 body {
-  background-color: ${BACKGROUND_COLOR};
+  background-color: ${colors.BACKGROUND};
 }
 
 main {

@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { HEADER_BACKGROUND, WHITE_COLOR } from "constants/colors";
+import { colors } from "constants/colors";
 
 export const StyledHeader = styled.header`
   padding: 32px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${HEADER_BACKGROUND};
-  color: ${WHITE_COLOR};
+  background: ${colors.HEADER_BACKGROUND};
+  color: ${colors.WHITE};
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 400;

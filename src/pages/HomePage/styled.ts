@@ -1,17 +1,12 @@
-import {
-  ACCENT_COLOR,
-  BACKGROUND_COLOR,
-  HEADER_LG,
-  HEADER_MD,
-  SECONDARY_COLOR,
-} from "constants/colors";
+import { colors } from "constants/colors";
+import { fonts } from "constants/fonts";
 
 import styled from "styled-components";
 
 export const StyledMain = styled.main`
   display: flex;
   justify-content: center;
-  background-color: ${BACKGROUND_COLOR};
+  background-color: ${colors.BACKGROUND};
 `;
 
 export const StyledContent = styled.div`
@@ -25,23 +20,23 @@ export const HeaderSubtext = styled.p`
   font-size: 1rem;
   font-weight: 400;
   line-height: 20px;
-  color: ${SECONDARY_COLOR};
+  color: ${colors.SECONDARY};
   text-align: center;
 `;
 
 export const StyledH2 = styled.h2`
-  font: ${HEADER_MD};
+  font: ${fonts.HEADER_MD};
   text-align: center;
 `;
 
 export const StyledH1 = styled.h1`
-  font: ${HEADER_LG};
+  font: ${fonts.HEADER_LG};
   text-align: center;
   text-transform: capitalize;
 `;
 
 export const EmphasizedH1 = styled.span`
-  color: ${ACCENT_COLOR};
+  color: ${colors.ACCENT};
 `;
 
 export const PageHeading = styled.div`

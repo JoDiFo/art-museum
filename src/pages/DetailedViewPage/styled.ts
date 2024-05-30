@@ -1,11 +1,12 @@
-import { BACKGROUND_COLOR, HEADER_MD, SECONDARY_COLOR } from "constants/colors";
+import { colors } from "constants/colors";
+import { fonts } from "constants/fonts";
 
 import styled from "styled-components";
 
 export const StyledMain = styled.main`
   display: flex;
   justify-content: center;
-  background-color: ${BACKGROUND_COLOR};
+  background-color: ${colors.BACKGROUND};
 `;
 
 export const StyledContent = styled.div`
@@ -46,7 +47,7 @@ export const Artist = styled.p`
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 30px;
-  color: ${SECONDARY_COLOR};
+  color: ${colors.SECONDARY};
 `;
 
 export const Date = styled.p`
@@ -57,11 +58,11 @@ export const Date = styled.p`
 `;
 
 export const StyledH2 = styled.h2`
-  font: ${HEADER_MD};
+  font: ${fonts.HEADER_MD};
 `;
 
 export const Field = styled.span`
-  color: ${SECONDARY_COLOR};
+  color: ${colors.SECONDARY};
   font-family: "Lexend Deca", sans-serif;
   font-size: 1rem;
   font-weight: 400;

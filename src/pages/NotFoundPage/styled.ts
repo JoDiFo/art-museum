@@ -1,16 +1,17 @@
-import { HEADER_LG, HEADER_MD, SECONDARY_COLOR } from "constants/colors";
+import { colors } from "constants/colors";
+import { fonts } from "constants/fonts";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const H1 = styled.h1`
-  font: ${HEADER_LG};
+  font: ${fonts.HEADER_LG};
   font-size: 5rem;
 `;
 
 export const HomeLink = styled(Link)`
   text-decoration: underline;
-  font: ${HEADER_MD};
-  color: ${SECONDARY_COLOR};
+  font: ${fonts.HEADER_MD};
+  color: ${colors.SECONDARY};
   font-size: 2.5rem;
 `;
 
@@ -24,5 +25,5 @@ export const PageWrapper = styled.div`
 `;
 
 export const StyledSpan = styled.span`
-  color: ${SECONDARY_COLOR};
+  color: ${colors.SECONDARY};
 `;

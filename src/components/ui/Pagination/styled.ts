@@ -1,4 +1,4 @@
-import { ACCENT_COLOR, WHITE_COLOR } from "constants/colors";
+import { colors } from "constants/colors";
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
@@ -18,8 +18,8 @@ export const StyledSpan = styled.span`
 `;
 
 export const SelectedSpan = styled(StyledSpan)`
-  background-color: ${ACCENT_COLOR};
-  color: ${WHITE_COLOR};
+  background-color: ${colors.ACCENT};
+  color: ${colors.WHITE};
   font-weight: 600;
 `;
 

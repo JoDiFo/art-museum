@@ -1,4 +1,4 @@
-import { WHITE_COLOR } from "constants/colors";
+import { colors } from "constants/colors";
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
@@ -6,7 +6,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${WHITE_COLOR};
+  background-color: ${colors.WHITE};
 `;
 
 export const StyledContent = styled.div`
