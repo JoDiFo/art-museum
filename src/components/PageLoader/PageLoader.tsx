@@ -1,4 +1,4 @@
-import { Loader } from "components/Loader";
+import { Loader } from "components/ui/Loader";
 import { Wrapper } from "./styled";
 
 export function PageLoader() {

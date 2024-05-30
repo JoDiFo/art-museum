@@ -1,6 +1,6 @@
 import { CardContainer } from "components/CardContainer";
-import { Loader } from "components/Loader";
-import { Pagination } from "components/Pagination";
+import { Loader } from "components/ui/Loader";
+import { Pagination } from "components/ui/Pagination";
 import { memo, useState } from "react";
 import useQueryArtworks from "utils/hooks/useQueryArtworks";
 import { LoaderWrapper } from "./styled";

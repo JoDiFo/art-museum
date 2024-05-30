@@ -10,7 +10,7 @@ import museumLogo from "assets/museum-logo.png";
 import BookmarkIcon from "assets/yellow-bookmark-icon.svg";
 import HomeIcon from "assets/home-icon.svg";
 import { useLocation } from "react-router-dom";
-import { BurgerMenu } from "components/BurgerMenu";
+import { BurgerMenu } from "components/ui/BurgerMenu";
 import { useState } from "react";
 import { ModalMenu } from "components/ModalMenu";
 

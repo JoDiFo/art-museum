@@ -10,7 +10,7 @@ import {
 import { SearchBar } from "components/SearchBar";
 import { PaginationContainer } from "components/PaginationContainer";
 import { useState } from "react";
-import { SortSelector } from "components/SortSelector";
+import { SortSelector } from "components/ui/SortSelector";
 import { OtherWorks } from "components/OtherWorks";
 
 function HomePage() {

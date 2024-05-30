@@ -9,7 +9,7 @@ import {
 
 import { IArtwork } from "types";
 import { Link } from "react-router-dom";
-import { AddToFavoritesButton } from "components/AddToFavoritesButton";
+import { AddToFavoritesButton } from "components/ui/AddToFavoritesButton";
 import { useDispatch, useSelector } from "react-redux";
 import { memo } from "react";
 import { RootState } from "store/reducers/favoritesReducer";

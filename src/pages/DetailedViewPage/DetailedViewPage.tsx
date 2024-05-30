@@ -16,7 +16,7 @@ import { PageLoader } from "components/PageLoader";
 import { useLocation } from "react-router-dom";
 import useQueryArtist from "utils/hooks/useQueryArtist";
 import { useState } from "react";
-import { AddToFavoritesButton } from "components/AddToFavoritesButton";
+import { AddToFavoritesButton } from "components/ui/AddToFavoritesButton";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/reducers/favoritesReducer";
 

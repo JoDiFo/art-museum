@@ -10,7 +10,7 @@ import {
 
 import { IArtwork } from "types";
 import { memo, useState } from "react";
-import { AddToFavoritesButton } from "components/AddToFavoritesButton";
+import { AddToFavoritesButton } from "components/ui/AddToFavoritesButton";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/reducers/favoritesReducer";
 
