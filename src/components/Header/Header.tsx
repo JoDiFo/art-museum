@@ -20,7 +20,7 @@ export function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleClick = () => {
-    setShowMenu(!showMenu);
+    setShowMenu((prevState) => !prevState);
   };
 
   return (
