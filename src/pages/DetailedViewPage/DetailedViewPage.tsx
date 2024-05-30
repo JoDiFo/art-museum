@@ -81,14 +81,14 @@ function DetailedViewPage() {
             src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
             alt={artwork.thumbnail?.alt_text}
           />
-          {showButton ? (
+          {showButton && (
             <ButtonWrapper>
               <AddToFavoritesButton
                 isFavorite={favoritesIds.some((value) => value === artwork.id)}
                 onClick={handleClick}
               />
             </ButtonWrapper>
-          ) : null}
+          )}
         </ImageWrapper>
         <PictureData>
           <div>

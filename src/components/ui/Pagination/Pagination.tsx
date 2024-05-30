@@ -28,14 +28,14 @@ export function Pagination({ currentPage, setPage }: IPaginationProps) {
             <SelectedSpan key={pageNumber}>{pageNumber}</SelectedSpan>
           ) : (
             <>
-              {pageNumber > 0 ? (
+              {pageNumber > 0 && (
                 <StyledSpan
                   onClick={() => setPage(pageNumber)}
                   key={pageNumber}
                 >
                   {pageNumber}
                 </StyledSpan>
-              ) : null}
+              )}
             </>
           ),
         )}

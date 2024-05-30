@@ -52,7 +52,7 @@ function PictureCard({ artwork }: IPictureCardProps) {
           alt={artwork.thumbnail?.alt_text}
         />
       </ImageWrapper>
-      {showDescription ? (
+      {showDescription && (
         <CardDescription>
           <Left>
             <PictureName>{artwork.title}</PictureName>
@@ -68,7 +68,7 @@ function PictureCard({ artwork }: IPictureCardProps) {
             />
           </div>
         </CardDescription>
-      ) : null}
+      )}
     </StyledCard>
   );
 }

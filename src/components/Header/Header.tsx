@@ -46,9 +46,7 @@ export function Header() {
         <BurgerWrapper>
           <BurgerMenu isActive={showMenu} onClick={handleClick} />
         </BurgerWrapper>
-        {showMenu ? (
-          <ModalMenu onClick={(value) => setShowMenu(value)} />
-        ) : null}
+        {showMenu && <ModalMenu onClick={(value) => setShowMenu(value)} />}
       </Content>
     </StyledHeader>
   );
