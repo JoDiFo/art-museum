@@ -11,12 +11,14 @@ export function buildLoaders(): webpack.RuleSetRule[] {
     test: /\.svg$/i,
     type: "asset",
     resourceQuery: /url/,
+    exclude: /node_modules/,
   };
 
   const svgLoader = {
     test: /\.svg$/,
     resourceQuery: { not: [/url/] },
     use: ["@svgr/webpack"],
+    exclude: /node_modules/,
   };
 
   const fileLoader = {
